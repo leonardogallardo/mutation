@@ -29,4 +29,12 @@ class ProductTest {
         Assert.assertEquals(price, 85)
     }
 
+    @Test
+    fun `should return price with discount by amount = 10`() {
+        val product = Product()
+        val amount = 10
+        val price = product.getPrice(amount, false)
+        Assert.assertEquals(price, 170)
+    }
+
 }
